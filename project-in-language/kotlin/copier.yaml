@@ -1,0 +1,3 @@
+_tasks:
+  - 'bash post_gen_project.sh'
+  - 'rm post_gen_project.sh'

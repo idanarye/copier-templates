@@ -1,0 +1,3 @@
+_tasks:
+  - 'python3 post_gen_project.py'
+  - 'rm post_gen_project.py'
