@@ -29,3 +29,4 @@ copy(
     src_path=str(templates_repo / template_name),
     dst_path=str(new_number),
 )
+print(new_number)
