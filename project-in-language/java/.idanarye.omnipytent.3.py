@@ -6,7 +6,7 @@ gradle = local['gradle']['-q']
 
 
 @task
-def compile(ctx):
+def build(ctx):
     gradle['build'] & ERUN.bang
 
 

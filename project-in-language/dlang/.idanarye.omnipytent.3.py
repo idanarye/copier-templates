@@ -7,7 +7,7 @@ dub = local['dub']['-q']
 
 
 @task
-def compile(ctx):
+def build(ctx):
     dub['build']['--compiler=dmd'] & ERUN.bang
 
 

@@ -6,7 +6,7 @@ EXECUTABLE = local.path('./a.out')
 
 
 @task
-def compile(ctx):
+def build(ctx):
     local['gcc']['-g'][local.path('.').glob('*.c')] & ERUN.bang
 
 
