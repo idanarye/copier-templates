@@ -4,7 +4,7 @@ import re
 import os
 
 from plumbum import local
-from copier import copy
+from copier import run_copy
 
 num_pattern = re.compile(r'^\d+$')
 
@@ -25,8 +25,9 @@ new_number = max_number + 1
 template_name = here.basename
 templates_repo = local.path(os.readlink(__file__)).parent / 'project-in-language'
 
-copy(
+run_copy(
     src_path=str(templates_repo / template_name),
     dst_path=str(new_number),
+    unsafe=True,
 )
 print(new_number)
