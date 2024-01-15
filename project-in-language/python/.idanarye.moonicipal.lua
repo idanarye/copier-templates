@@ -1,8 +1,10 @@
 local moonicipal = require'moonicipal'
 local T = moonicipal.tasks_file()
 
+local blunder = require'blunder'
+
 function T:run()
-    vim.cmd[[!./main.py]]
+    blunder.run{'python', './main.py'}
 end
 
 function T:debug()
