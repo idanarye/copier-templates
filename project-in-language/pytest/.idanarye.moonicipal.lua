@@ -1,10 +1,12 @@
 local moonicipal = require'moonicipal'
+---@diagnostic disable-next-line: unused-local
 local T = moonicipal.tasks_file()
 
-function T:run()
-    vim.cmd'!py.test -qs tests/'
-end
+local blunder = require'blunder'
 
-function T:symlink_easypy()
-    vim.cmd[[!ln -s /files/code/wekapp/deps/easypy/easypy/ .]]
+---@diagnostic disable-next-line: unused-local
+local P, cfg = moonicipal.import(require'idan.project.python.with_uv')
+
+function T:run()
+    blunder.run{'uv', '-q', 'run', 'pytest', '-vs', 'tests/'}
 end
