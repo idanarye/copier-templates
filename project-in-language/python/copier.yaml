@@ -1,4 +1,4 @@
 _tasks:
-  - 'uv init --virtual'
+  - 'uv init --virtual --python 3.11'
   - 'uv add --dev IPython'
   - 'git init'
