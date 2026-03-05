@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-let copier_dir = $env.CURRENT_FILE | path dirname
+let copier_dir = $env.CURRENT_FILE | path expand | path dirname
 let language = $env.PROCESS_PATH | path dirname | path expand | path basename
 
 let new_dir_name = try {
